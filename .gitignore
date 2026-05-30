@@ -1,0 +1,16 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.env
+.DS_Store
+
+# Generated research logs (a curated sample is kept under logs/sample/)
+logs/research_log.jsonl
+logs/research_log.db
+
+# Eval throwaway run logs (RESULTS.md is kept)
+eval/_eval_run_log.*
+
+# Keep only the readable JSONL sample (not the binary SQLite)
+logs/sample/research_log.db

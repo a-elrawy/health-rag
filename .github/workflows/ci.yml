@@ -1,0 +1,36 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master]
+  pull_request:
+    branches: [main, master]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+          cache: pip
+
+      - name: Install dependencies
+        run: pip install -r requirements.txt
+
+      - name: Run tests
+        run: pytest -q
+        env:
+          # No LLM key in CI; answer-path tests skip via pytest.mark.skipif
+          GROQ_API_KEY: ""
+          OPENAI_API_KEY: ""
+          OPENROUTER_API_KEY: ""
+
+      - name: Run eval (retrieval, calibration, gate, guardrail)
+        run: python -m eval.run_eval --write --ci
+        env:
+          GROQ_API_KEY: ""
+          OPENAI_API_KEY: ""
+          OPENROUTER_API_KEY: ""

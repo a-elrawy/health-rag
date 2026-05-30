@@ -1,0 +1,20 @@
+{
+  "description": "Evidence-sufficiency gate evaluation. 'should_answer' is the gold label: True when the corpus genuinely covers the question and the system should answer; False when it should refuse (off-topic, out-of-scope, or too vague).",
+  "cases": [
+    {"question": "What is HFpEF and what are its common symptoms?", "should_answer": true},
+    {"question": "What should I ask my doctor about HFpEF treatment options?", "should_answer": true},
+    {"question": "Are SGLT2 inhibitors used to treat HFpEF?", "should_answer": true},
+    {"question": "What lifestyle changes help with heart failure?", "should_answer": true},
+    {"question": "How much salt should I eat with heart failure?", "should_answer": true},
+    {"question": "What is cardio-kidney-metabolic syndrome?", "should_answer": true},
+    {"question": "How often should I weigh myself with heart failure?", "should_answer": true},
+    {"question": "Why are NSAIDs like ibuprofen risky in heart failure?", "should_answer": true},
+    {"question": "What is the recommended treatment for a broken ankle?", "should_answer": false},
+    {"question": "What are the symptoms of measles?", "should_answer": false},
+    {"question": "What is the capital of France?", "should_answer": false},
+    {"question": "How do I fix my car engine?", "should_answer": false},
+    {"question": "Can you give me a recipe for chocolate cake?", "should_answer": false},
+    {"question": "Is it bad?", "should_answer": false},
+    {"question": "Tell me more.", "should_answer": false}
+  ]
+}

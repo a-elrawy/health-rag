@@ -1,0 +1,16 @@
+{
+  "description": "Retrieval quality evaluation. 'relevant_docs' lists the document_id(s) that SHOULD appear among the top-k retrieved chunks for the question. Used to compute hit@k and MRR.",
+  "cases": [
+    {"question": "What is HFpEF and what are its symptoms?", "relevant_docs": ["doc_hfpef_overview"]},
+    {"question": "How is HFpEF diagnosed?", "relevant_docs": ["doc_hfpef_overview"]},
+    {"question": "Which medicines are used to treat HFpEF?", "relevant_docs": ["doc_hfpef_treatments"]},
+    {"question": "Are SGLT2 inhibitors helpful for heart failure?", "relevant_docs": ["doc_hfpef_treatments"]},
+    {"question": "What questions should I ask my doctor about treatment?", "relevant_docs": ["doc_hfpef_treatments"]},
+    {"question": "What is cardio-kidney-metabolic syndrome?", "relevant_docs": ["doc_cardio_kidney_metabolic"]},
+    {"question": "How does kidney disease affect the heart?", "relevant_docs": ["doc_cardio_kidney_metabolic"]},
+    {"question": "How much salt should I eat?", "relevant_docs": ["doc_patient_education_lifestyle"]},
+    {"question": "How often should I weigh myself?", "relevant_docs": ["doc_patient_education_lifestyle"]},
+    {"question": "When should I call emergency services?", "relevant_docs": ["doc_safety_warnings"]},
+    {"question": "Are NSAIDs safe in heart failure?", "relevant_docs": ["doc_safety_warnings"]}
+  ]
+}

@@ -1,0 +1,17 @@
+# Core API
+fastapi==0.136.3
+uvicorn[standard]==0.48.0
+pydantic==2.13.4
+python-dotenv==1.2.2
+
+# Retrieval / vector search
+numpy==2.4.6
+faiss-cpu==1.14.2
+sentence-transformers==5.5.1
+
+# LLM generation (OpenAI-compatible: OpenAI / Groq / OpenRouter)
+openai==2.38.0
+
+# Test harness
+httpx==0.28.1
+pytest==9.0.3
